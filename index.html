@@ -13,6 +13,10 @@
       color: #333;
     }
 
+    #content {
+      display: none;
+    }
+
     header {
       background-color: #007acc;
       color: white;
@@ -54,41 +58,53 @@
       text-decoration: underline;
     }
   </style>
+
+  <script>
+    window.onload = function () {
+      const passwort = prompt("Aus Sicherheitsgründen bitte Passwort eingeben:");
+      if (passwort === "meinpasswort") {
+        document.getElementById("content").style.display = "block";
+      } else {
+        document.body.innerHTML = "<h1>⛔ Zugriff verweigert</h1><p>Falsches Passwort.</p>";
+      }
+    };
+  </script>
 </head>
+
 <body>
+  <div id="content">
+    <header>
+      <h1>Nils Zumstein</h1>
+      <p>Wunschberuf: Informatiker EFZ Plattformentwicklung</p>
+    </header>
 
-  <header>
-    <h1>Nils Zumstein</h1>
-    <p>Wunschberuf: Informatiker EFZ Plattformentwicklung</p>
-  </header>
+    <section id="lebenslauf">
+      <h2>Lebenslauf</h2>
+      <p>Hier kannst du meinen Lebenslauf als PDF herunterladen:</p>
+      <a href="lebenslauf.pdf" download>📄 Lebenslauf herunterladen</a>
+    </section>
 
-  <section id="lebenslauf">
-    <h2>Lebenslauf</h2>
-    <p>Hier kannst du meinen Lebenslauf als PDF herunterladen:</p>
-    <a href="lebenslauf.pdf" download>📄 Lebenslauf herunterladen</a>
-  </section>
-
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="projekte">
-      <div class="projekt">
-        <h3>Projekt 1</h3>
-        <p>Kurzbeschreibung deines Projekts.</p>
-        <a href="#">Projekt-Link</a>
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <div class="projekte">
+        <div class="projekt">
+          <h3>Projekt 1</h3>
+          <p>werqqwerqwerqwer.</p>
+          <a href="#">Link</a>
+        </div>
+        <div class="projekt">
+          <h3>Projekt 2</h3>
+          <p>Kqwerqwerqwer</p>
+          <a href="#">Link</a>
+        </div>
       </div>
-      <div class="projekt">
-        <h3>Projekt 2</h3>
-        <p>Kurzbeschreibung deines Projekts.</p>
-        <a href="#">Projekt-Link</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="kontakt">
-    <h2>Kontakt</h2>
-    <p>E-Mail: <a href="nils.zumstein@gmail.com">nils.zumstein@gmail.com</a></p>
-    <p>Telefon: <a href="+41782436507">+41 78 243 65 07</a></p>
-  </section>
-
+    <section id="kontakt">
+      <h2>Kontakt</h2>
+      <p>E-Mail: <a href="mailto:nils.zumstein@gmail.com">nils.zumstein@gmail.com</a></p>
+      <p>Telefon: <a href="tel:+41782436507">+41 78 243 65 07</a></p>
+    </section>
+  </div>
 </body>
 </html>
